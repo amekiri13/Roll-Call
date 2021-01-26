@@ -50,7 +50,7 @@ namespace 点名器
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            OpenBrowser("https://github.com/amekiri13/Roll-Call-");
+            OpenBrowser("https://github.com/amekiri13/Roll-Call");
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
