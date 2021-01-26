@@ -1,0 +1,15 @@
+[Person0]
+name=这里输入姓名
+sex=这里输入性别（M:男，F:女）
+class=这里输入班级
+ID=这里输入学号
+[Person1]
+name=1
+sex=M
+class=a
+ID=1001
+[Person2]
+name=2
+sex=F
+class=b
+ID=1002

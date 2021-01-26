@@ -1,0 +1,13 @@
+C:\Users\fc201\source\repos\点名器\点名器\bin\Debug\点名器.exe.config
+C:\Users\fc201\source\repos\点名器\点名器\bin\Debug\点名器.exe
+C:\Users\fc201\source\repos\点名器\点名器\bin\Debug\点名器.pdb
+C:\Users\fc201\source\repos\点名器\点名器\obj\Debug\点名器.csprojAssemblyReference.cache
+C:\Users\fc201\source\repos\点名器\点名器\obj\Debug\点名器.Form1.resources
+C:\Users\fc201\source\repos\点名器\点名器\obj\Debug\点名器.Properties.Resources.resources
+C:\Users\fc201\source\repos\点名器\点名器\obj\Debug\点名器.csproj.GenerateResource.cache
+C:\Users\fc201\source\repos\点名器\点名器\obj\Debug\点名器.csproj.CoreCompileInputs.cache
+C:\Users\fc201\source\repos\点名器\点名器\obj\Debug\点名器.exe
+C:\Users\fc201\source\repos\点名器\点名器\obj\Debug\点名器.pdb
+C:\Users\fc201\source\repos\点名器\点名器\obj\Debug\点名器.Setting_Random.resources
+C:\Users\fc201\source\repos\点名器\点名器\obj\Debug\点名器.Voice_Setting.resources
+C:\Users\fc201\source\repos\点名器\点名器\obj\Debug\点名器.AboutForm.resources
