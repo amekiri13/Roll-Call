@@ -6,7 +6,7 @@
 ## 使用方法
 1. 第一步 启动程序，之后可以看到一个页面。
 * ![](img/1.png)
-2. 之后可以看到此程序出现了两个文件，分别是"config.ini"和"names.txt"，其中"config.ini"是配置文件，不能乱改，而"names.txt"为名单。
+2. 之后可以看到此程序的目录出现了两个文件，分别是"config.ini"和"names.txt"，其中"config.ini"是配置文件，不能乱改，而"names.txt"为名单。
 * ![](img/2.png)
 3. 打开"names.txt"文件，可以看到以下内容：
 * ![](img/3.png)
