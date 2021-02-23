@@ -38,7 +38,7 @@ namespace 点名器
             }
             else
             {
-                textBox2.Text = Form1.f1.t_seed;
+                textBox2.Text = Convert.ToString(Form1.f1.seed);
             }
         }
 
@@ -52,6 +52,7 @@ namespace 点名器
             else if (textBox2.Enabled == true)
             {
                 Form1.f1.t_seed = textBox2.Text;
+                Form1.f1.seed = Convert.ToInt32(textBox2.Text);
             }
             MessageBox.Show(this, "设置成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();

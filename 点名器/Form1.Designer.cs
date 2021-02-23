@@ -51,6 +51,7 @@ namespace 点名器
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.编辑名单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.抽取设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.语音相关设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -236,29 +237,37 @@ namespace 点名器
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.编辑名单ToolStripMenuItem,
             this.抽取设置ToolStripMenuItem,
             this.语音相关设置ToolStripMenuItem,
             this.关于ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(169, 100);
+            // 
+            // 编辑名单ToolStripMenuItem
+            // 
+            this.编辑名单ToolStripMenuItem.Name = "编辑名单ToolStripMenuItem";
+            this.编辑名单ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.编辑名单ToolStripMenuItem.Text = "编辑名单";
+            this.编辑名单ToolStripMenuItem.Click += new System.EventHandler(this.编辑名单ToolStripMenuItem_Click);
             // 
             // 抽取设置ToolStripMenuItem
             // 
             this.抽取设置ToolStripMenuItem.Name = "抽取设置ToolStripMenuItem";
-            this.抽取设置ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.抽取设置ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.抽取设置ToolStripMenuItem.Text = "抽取设置";
             this.抽取设置ToolStripMenuItem.Click += new System.EventHandler(this.抽取设置ToolStripMenuItem_Click);
             // 
             // 语音相关设置ToolStripMenuItem
             // 
             this.语音相关设置ToolStripMenuItem.Name = "语音相关设置ToolStripMenuItem";
-            this.语音相关设置ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.语音相关设置ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.语音相关设置ToolStripMenuItem.Text = "语音相关设置";
             // 
             // 关于ToolStripMenuItem
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
             this.关于ToolStripMenuItem.Text = "关于";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
             // 
@@ -324,6 +333,7 @@ namespace 点名器
         private System.Windows.Forms.ToolStripMenuItem 抽取设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 语音相关设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 编辑名单ToolStripMenuItem;
     }
 }
 

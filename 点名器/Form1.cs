@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 using System.IO;
 using System.Collections;
@@ -21,6 +22,7 @@ namespace 点名器
         public int Interval, seed, type, rate, volume;
         public string t_seed;
         public bool voiceEnable;
+        Random rd;
         public static Form1 f1;
 
         IniOperate iniop = new IniOperate();
@@ -32,7 +34,7 @@ namespace 点名器
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Text = "点名器 Alpha V1.0";
+            Text = "点名器 Alpha V1.1";
             pictureBox1.BackColor = Color.Gray;
             path = Environment.CurrentDirectory;
             checkBox1.Visible = false;
@@ -79,6 +81,13 @@ namespace 点名器
                 Person t_student = new Person(t_name, t_sex, t_ID, t_class, t_IP);
                 students.Add(t_student);
             }
+            
+            if (t_seed == "default") rd = new Random();
+            else
+            {
+                seed = Convert.ToInt32(t_seed);
+                rd = new Random(seed);
+            }
         }
         private void Show(Person stu)
         {
@@ -98,13 +107,6 @@ namespace 点名器
         {
             if (type == 0)
             {
-                Random rd;
-                if (t_seed == "default") rd = new Random();
-                else
-                {
-                    seed = Convert.ToInt32(t_seed);
-                    rd = new Random(seed);
-                }
                 Person element = (Person)students[rd.Next(0, students.Count)];
                 Show(element);
 
@@ -137,6 +139,28 @@ namespace 点名器
         {
             AboutForm f = new AboutForm();
             f.Show();
+        }
+        private bool IsProcessExist()
+        {
+            Process[] processList = Process.GetProcesses();
+            foreach (Process process in processList)
+            {
+                //MessageBox.Show(process.ProcessName);
+                if (process.ProcessName == "notepad")
+                {
+                    //MessageBox.Show("Y");
+                    //process.Kill(); //结束进程
+                    return true;
+                }
+
+            }
+            return false;
+        }
+        private void 编辑名单ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this, "完成编辑后，请重启程序！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Process.Start("notepad", "names.txt");
+            Close();
         }
 
         private void 抽取设置ToolStripMenuItem_Click(object sender, EventArgs e)
