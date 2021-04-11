@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <UpdateUrl>https://github.com/amekiri13/Roll-Call/blob/main/%25E7%2582%25B9%25E5%2590%258D%25E5%2599%25A8/bin/Debug/%25E7%2582%25B9%25E5%2590%258D%25E5%2599%25A8.exe/</UpdateUrl>
+    <UpdateUrl>https://raw.githubusercontent.com/amekiri13/Roll-Call/main/%25E7%2582%25B9%25E5%2590%258D%25E5%2599%25A8/bin/Debug/%25E7%2582%25B9%25E5%2590%258D%25E5%2599%25A8.exe/</UpdateUrl>
     <WebPage>publish.htm</WebPage>
     <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
@@ -57,13 +57,20 @@
     <ManifestCertificateThumbprint>C238D53B373E521439931B8F884EC47EA649E0F4</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>点名器_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>点名器_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -25,7 +25,6 @@ namespace 点名器
         Random rd;
         public static Form1 f1;
 
-        IniOperate iniop = new IniOperate();
         public Form1()
         {
             InitializeComponent();
@@ -43,12 +42,12 @@ namespace 点名器
             if (File.Exists(path + "\\names.txt") == false)
             {
                 //File.Create(path + @"\names.txt");
-                iniop.Write("Person0", "name", "这里输入姓名", path + "\\names.txt");
-                iniop.Write("Person0", "sex", "这里输入性别（M:男，F:女）", path + "\\names.txt");
-                iniop.Write("Person0", "class", "这里输入班级", path + "\\names.txt");
-                iniop.Write("Person0", "ID", "这里输入学号", path + "\\names.txt");
-                //iniop.Write("Person0", "IsDefault", "false", path + "\\names.txt");
-                iniop.Write("Person0", "ImagePath", "这里输入学生相关图片路径", path + "\\names.txt");
+                IniOperate.Write("Person0", "name", "这里输入姓名", path + "\\names.txt");
+                IniOperate.Write("Person0", "sex", "这里输入性别（M:男，F:女）", path + "\\names.txt");
+                IniOperate.Write("Person0", "class", "这里输入班级", path + "\\names.txt");
+                IniOperate.Write("Person0", "ID", "这里输入学号", path + "\\names.txt");
+                //IniOperate.Write("Person0", "IsDefault", "false", path + "\\names.txt");
+                IniOperate.Write("Person0", "ImagePath", "这里输入学生相关图片路径", path + "\\names.txt");
                 Initial();
             }
             else
@@ -60,24 +59,24 @@ namespace 点名器
         }
         public void Initial()
         {
-            Interval = Convert.ToInt32(iniop.Read("Random", "interval", "100", path + "\\config.ini"));
-            //seed = Convert.ToInt32(iniop.Read("Random", "seed", "-1", path + "\\config.ini"));
-            t_seed = iniop.Read("Random", "seed", "default", path + "\\config.ini");
-            type = Convert.ToInt32(iniop.Read("General", "type", "0", path + "\\config.ini"));
-            string t_ve = iniop.Read("Voice", "voiceEnable", "false", path + "\\config.ini");
+            Interval = Convert.ToInt32(IniOperate.Read("Random", "interval", "100", path + "\\config.ini"));
+            //seed = Convert.ToInt32(IniOperate.Read("Random", "seed", "-1", path + "\\config.ini"));
+            t_seed = IniOperate.Read("Random", "seed", "default", path + "\\config.ini");
+            type = Convert.ToInt32(IniOperate.Read("General", "type", "0", path + "\\config.ini"));
+            string t_ve = IniOperate.Read("Voice", "voiceEnable", "false", path + "\\config.ini");
             if (t_ve == "true") voiceEnable = true;
             else if (t_ve == "false") voiceEnable = false;
             if (type == 0) radioButton1.Checked = true;
             else if (type == 1) radioButton2.Checked = true;
             checkBox1.Checked = voiceEnable;
-            sections_list = iniop.GetAllSectionNames(path + "\\names.txt");
+            sections_list = IniOperate.GetAllSectionNames(path + "\\names.txt");
             foreach(string section in sections_list)
             {
-                string t_name = iniop.Read(section, "name", "null", path + "\\names.txt");
-                string t_sex = iniop.Read(section, "sex", "null", path + "\\names.txt");
-                string t_class = iniop.Read(section, "class", "null", path + "\\names.txt");
-                string t_ID = iniop.Read(section, "ID", "null", path + "\\names.txt");
-                string t_IP = iniop.Read(section, "ImagePath", "null", path + "\\names.txt");
+                string t_name = IniOperate.Read(section, "name", "null", path + "\\names.txt");
+                string t_sex = IniOperate.Read(section, "sex", "null", path + "\\names.txt");
+                string t_class = IniOperate.Read(section, "class", "null", path + "\\names.txt");
+                string t_ID = IniOperate.Read(section, "ID", "null", path + "\\names.txt");
+                string t_IP = IniOperate.Read(section, "ImagePath", "null", path + "\\names.txt");
                 Person t_student = new Person(t_name, t_sex, t_ID, t_class, t_IP);
                 students.Add(t_student);
             }
@@ -176,13 +175,13 @@ namespace 点名器
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            iniop.Write("General", "type", Convert.ToString(type), path + "\\config.ini");
-            //iniop.Write("Random", "seed", Convert.ToString(seed), path + "\\config.ini");
-            if (t_seed == "default") iniop.Write("Random", "seed", "default", path + "\\config.ini");
-            else iniop.Write("Random", "seed", Convert.ToString(seed), path + "\\config.ini");
-            iniop.Write("Random", "interval", Convert.ToString(Interval), path + "\\config.ini");
-            if (voiceEnable == true) iniop.Write("Voice", "voiceEnable", "true", path + "\\config.ini");
-            else if (voiceEnable == false) iniop.Write("Voice", "voiceEnable", "false", path + "\\config.ini");
+            IniOperate.Write("General", "type", Convert.ToString(type), path + "\\config.ini");
+            //IniOperate.Write("Random", "seed", Convert.ToString(seed), path + "\\config.ini");
+            if (t_seed == "default") IniOperate.Write("Random", "seed", "default", path + "\\config.ini");
+            else IniOperate.Write("Random", "seed", Convert.ToString(seed), path + "\\config.ini");
+            IniOperate.Write("Random", "interval", Convert.ToString(Interval), path + "\\config.ini");
+            if (voiceEnable == true) IniOperate.Write("Voice", "voiceEnable", "true", path + "\\config.ini");
+            else if (voiceEnable == false) IniOperate.Write("Voice", "voiceEnable", "false", path + "\\config.ini");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -209,6 +208,9 @@ namespace 点名器
                 radioButton2.Enabled = true;
                 timer1.Stop();
                 textBox5.Text += "姓名：" + textBox1.Text + " 学号：" + textBox4.Text + "\r\n";
+                textBox5.Focus();
+                textBox5.Select(textBox5.TextLength, 0);//光标定位到文本最后
+                textBox5.ScrollToCaret();
             }
         }
     }

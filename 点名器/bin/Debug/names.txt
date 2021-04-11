@@ -21,4 +21,10 @@ name=小
 sex=M
 class=二班
 ID=1004
-ImagePath=C:\img\3.png
+ImagePath=C:\img\4.png
+[Person4]
+name=小黄
+sex=男
+class=三班
+ID=1005
+ImagePath=C:\img\5.png

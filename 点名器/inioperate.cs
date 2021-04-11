@@ -18,7 +18,7 @@ namespace 点名器
         private static extern int GetPrivateProfileSectionNames(IntPtr lpszReturnBuffer, int nSize, string filePath);
 
         //读取ini文件 section表示ini文件中的节点名，key表示键名 def没有查到的话返回的默认值 filePath文件路径
-        public string Read(string section, string key, string def, string filePath)
+        public static string Read(string section, string key, string def, string filePath)
         {
             StringBuilder sb = new StringBuilder(1024);
             GetPrivateProfileString(section, key, def, sb, 1024, filePath);
@@ -26,7 +26,7 @@ namespace 点名器
         }
 
         //写入ini文件 section表示ini文件中的节点名，key表示键名 value写入的值 filePath文件路径
-        public int Write(string section, string key, string value, string filePath)
+        public static int Write(string section, string key, string value, string filePath)
         {
             //CheckPath(filePath);
             return WritePrivateProfileString(section, key, value, filePath);
@@ -34,19 +34,19 @@ namespace 点名器
 
 
         //删除section 
-        public int DeleteSection(string section, string filePath)
+        public static int DeleteSection(string section, string filePath)
         {
             return Write(section, null, null, filePath);
         }
 
 
         //删除键
-        public int DeleteKey(string section, string key, string filePath)
+        public static int DeleteKey(string section, string key, string filePath)
         {
             return Write(section, key, null, filePath);
         }
 
-        public string[] GetAllSectionNames(/*out string[] sections,*/ string path)
+        public static string[] GetAllSectionNames(/*out string[] sections,*/ string path)
         {
             string[] sections;
             int MAX_BUFFER = 32767;
