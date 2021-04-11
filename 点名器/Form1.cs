@@ -33,7 +33,7 @@ namespace 点名器
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Text = "点名器 Alpha V1.1";
+            Text = "点名器 V1.0.0.3(Alpha)";
             pictureBox1.BackColor = Color.Gray;
             path = Environment.CurrentDirectory;
             checkBox1.Visible = false;
