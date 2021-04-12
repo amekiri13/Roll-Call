@@ -33,7 +33,7 @@ namespace 点名器
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Text = "点名器 V1.0.0.3(Alpha)";
+            Text = "点名器 V1.1.0.1(Beta)";
             pictureBox1.BackColor = Color.Gray;
             path = Environment.CurrentDirectory;
             checkBox1.Visible = false;
@@ -54,6 +54,10 @@ namespace 点名器
             {
                 //names_init = File.ReadAllText(path + @"\names.txt");
                 Initial();
+            }
+            for (int i = 0; i < sections_list.Length; i++)
+            {
+                EditnameForm.sections_list.Add(sections_list[i]);
             }
             //names_list = names_init.Split('\n');
         }
@@ -77,7 +81,7 @@ namespace 点名器
                 string t_class = IniOperate.Read(section, "class", "null", path + "\\names.txt");
                 string t_ID = IniOperate.Read(section, "ID", "null", path + "\\names.txt");
                 string t_IP = IniOperate.Read(section, "ImagePath", "null", path + "\\names.txt");
-                Person t_student = new Person(t_name, t_sex, t_ID, t_class, t_IP);
+                Person t_student = new Person(t_name, t_sex, t_ID, t_class, t_IP, section);
                 students.Add(t_student);
             }
             
@@ -92,14 +96,18 @@ namespace 点名器
         {
             textBox1.Text = stu.GetName();
             string t_str = stu.GetSex();
-            if (t_str == "M") textBox2.Text = "男";
-            else if (t_str == "F") textBox2.Text = "女";
+            if ("M".Equals(t_str.ToUpper())) textBox2.Text = "男";
+            else if ("F".Equals(t_str.ToUpper())) textBox2.Text = "女";
             else textBox2.Text = "其他";
             textBox3.Text = stu.GetClass();
             textBox4.Text = stu.GetPersonID();
             if (File.Exists(stu.GetPersonnalImagePath()))
             {
                 pictureBox1.Image = Image.FromFile(stu.GetPersonnalImagePath());
+            }
+            else
+            {
+                pictureBox1.Image = null;
             }
         }
         private void timer1_Tick(object sender, EventArgs e)
@@ -157,9 +165,11 @@ namespace 点名器
         }
         private void 编辑名单ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(this, "完成编辑后，请重启程序！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            /*MessageBox.Show(this, "完成编辑后，请重启程序！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Process.Start("notepad", "names.txt");
-            Close();
+            Close();*/
+            EditnameForm f = new EditnameForm();
+            f.Show();
         }
 
         private void 抽取设置ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -213,5 +223,10 @@ namespace 点名器
                 textBox5.ScrollToCaret();
             }
         }
+        public string[] GetAllSections()
+        {
+            return sections_list;
+        }
+        
     }
 }

@@ -41,14 +41,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="点名器.exe" size="26080">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="点名器.exe" size="34784">
       <assemblyIdentity name="点名器" version="1.0.0.0" publicKeyToken="C71CC2951042FD5C" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zoEC8r0vTV5zObGj6vB+PYfNQGxDvJKKGWvxHDXg/bo=</dsig:DigestValue>
+        <dsig:DigestValue>b0bESVUxgZMJ4MTfB58kV93OdvUQu/q72LfbwXED7Rw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

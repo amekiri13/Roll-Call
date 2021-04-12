@@ -44,15 +44,32 @@ namespace 点名器
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1.f1.Interval = Convert.ToInt32(textBox1.Text);
+            try
+            {
+                Form1.f1.Interval = Convert.ToInt32(textBox1.Text);
+            }
+            catch (FormatException e1)
+            {
+                MessageBox.Show(this, textBox1.ToString() + "中数据不为整数！\r\n" + e1.ToString(), "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             if (textBox2.Enabled == false)
             {
                 Form1.f1.t_seed = "default";
             }
             else if (textBox2.Enabled == true)
             {
+                try
+                {
+                    Form1.f1.seed = Convert.ToInt32(textBox2.Text);
+                }
+                catch (FormatException e1)
+                {
+                    MessageBox.Show(this, textBox2.ToString() + "中数据不为整数！\r\n" + e1.ToString(), "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 Form1.f1.t_seed = textBox2.Text;
-                Form1.f1.seed = Convert.ToInt32(textBox2.Text);
             }
             MessageBox.Show(this, "设置成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();

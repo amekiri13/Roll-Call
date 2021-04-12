@@ -13,6 +13,7 @@ namespace 点名器
         private string _class;
         private string ImagePath;
         private string sex;
+        private string localSection;
         private bool IsDefault;//若为真，则ImagePath无效
         public Person(string n, string _sex, string _ID, string c, string ip)
         {
@@ -21,6 +22,15 @@ namespace 点名器
             ID = _ID;
             _class = c;
             ImagePath = ip;
+        }
+        public Person(string n, string _sex, string _ID, string c, string ip, string section)
+        {
+            name = n;
+            sex = _sex;
+            ID = _ID;
+            _class = c;
+            ImagePath = ip;
+            localSection = section;
         }
         public void SetName(string n)
         {
@@ -42,6 +52,14 @@ namespace 点名器
         {
             ImagePath = ip;
         }
+        public void SetLocalSection(string s)
+        {
+            localSection = s;
+        }
+        public string GetLocalSection()
+        {
+            return localSection;
+        }
         public string GetName()
         {
             return name;
@@ -62,5 +80,15 @@ namespace 点名器
         {
             return ImagePath;
         }
+        public bool WriteFile(string filepath)
+        {
+            if (IniOperate.Write(localSection, "name", name, filepath) == 0) return false;
+            if (IniOperate.Write(localSection, "sex", sex, filepath) == 0) return false;
+            if (IniOperate.Write(localSection, "class", _class, filepath) == 0) return false;
+            if (IniOperate.Write(localSection, "ID", ID, filepath) == 0) return false;
+            if (IniOperate.Write(localSection, "ImagePath", ImagePath, filepath) == 0) return false;
+            return true;
+        }
+
     }
 }

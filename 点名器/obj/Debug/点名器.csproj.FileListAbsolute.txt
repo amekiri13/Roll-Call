@@ -15,3 +15,4 @@ C:\Users\fc201\source\repos\点名器\点名器\bin\Debug\点名器.exe.manifest
 C:\Users\fc201\source\repos\点名器\点名器\bin\Debug\点名器.application
 C:\Users\fc201\source\repos\点名器\点名器\obj\Debug\点名器.exe.manifest
 C:\Users\fc201\source\repos\点名器\点名器\obj\Debug\点名器.application
+C:\Users\fc201\source\repos\点名器\点名器\obj\Debug\点名器.EditnameForm.resources
