@@ -25,7 +25,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>https://raw.githubusercontent.com/amekiri13/Roll-Call/main/%25E7%2582%25B9%25E5%2590%258D%25E5%2599%25A8/bin/Debug/%25E7%2582%25B9%25E5%2590%258D%25E5%2599%25A8.exe/</UpdateUrl>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

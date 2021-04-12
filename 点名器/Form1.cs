@@ -33,7 +33,7 @@ namespace 点名器
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Text = "点名器 V1.1.0.1(Beta)";
+            Text = "点名器 V1.1.0.2(Beta)";
             pictureBox1.BackColor = Color.Gray;
             path = Environment.CurrentDirectory;
             checkBox1.Visible = false;
@@ -88,7 +88,30 @@ namespace 点名器
             if (t_seed == "default") rd = new Random();
             else
             {
-                seed = Convert.ToInt32(t_seed);
+                try
+                {
+                    seed = Convert.ToInt32(t_seed);
+                }
+                catch (FormatException e1)
+                {
+                    MessageBox.Show(this, "config.ini文件中seed的值\"" + t_seed.ToString() + "\"类型不正确，请将config.ini中的seed值改为\"default\"或整数!\r\n" + e1.ToString(), "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    t_seed = "default";
+                    string t_log = "";
+                    try
+                    {
+                        t_log = File.ReadAllText(Environment.CurrentDirectory + "\\debug.log", Encoding.UTF8);
+                    }
+                    catch (FileNotFoundException e2)
+                    {
+                        File.WriteAllText(Environment.CurrentDirectory + "\\debug.log", t_log);
+                    }
+                    finally
+                    {
+                        t_log = t_log + "\n" + DateTime.Now.ToString() + ": " + e1.ToString();
+                        File.WriteAllText(Environment.CurrentDirectory + "\\debug.log", t_log);
+                    }
+                    Close();
+                }
                 rd = new Random(seed);
             }
         }
@@ -103,7 +126,29 @@ namespace 点名器
             textBox4.Text = stu.GetPersonID();
             if (File.Exists(stu.GetPersonnalImagePath()))
             {
-                pictureBox1.Image = Image.FromFile(stu.GetPersonnalImagePath());
+                try
+                {
+                    pictureBox1.Image = Image.FromFile(stu.GetPersonnalImagePath());
+                }
+                catch (OutOfMemoryException e)
+                {
+
+                    pictureBox1.Image = null; 
+                    string t_log = "";
+                    try
+                    {
+                        t_log = File.ReadAllText(path + "\\debug.log", Encoding.UTF8);
+                    }
+                    catch (FileNotFoundException e1)
+                    {
+                        File.WriteAllText(path + "\\debug.log", t_log);
+                    }
+                    finally
+                    {
+                        t_log = t_log + "\n" + DateTime.Now.ToString() + ": " + e.ToString();
+                        File.WriteAllText(path + "\\debug.log", t_log);
+                    }
+                }
             }
             else
             {

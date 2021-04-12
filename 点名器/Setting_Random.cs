@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,20 @@ namespace 点名器
             catch (FormatException e1)
             {
                 MessageBox.Show(this, textBox1.ToString() + "中数据不为整数！\r\n" + e1.ToString(), "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string t_log = "";
+                try
+                {
+                    t_log = File.ReadAllText(Environment.CurrentDirectory + "\\debug.log", Encoding.UTF8);
+                }
+                catch (FileNotFoundException e2)
+                {
+                    File.WriteAllText(Environment.CurrentDirectory + "\\debug.log", t_log);
+                }
+                finally
+                {
+                    t_log = t_log + "\n" + DateTime.Now.ToString() + ": " + e1.ToString();
+                    File.WriteAllText(Environment.CurrentDirectory + "\\debug.log", t_log);
+                }
                 return;
             }
             

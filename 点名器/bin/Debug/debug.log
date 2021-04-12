@@ -1,0 +1,183 @@
+
+2021/4/12 18:28:40: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 117
+2021/4/12 18:28:41: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 117
+2021/4/12 18:28:41: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 117
+2021/4/12 18:28:41: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 117
+2021/4/12 18:28:41: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 117
+2021/4/12 18:28:41: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 117
+2021/4/12 18:28:42: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 117
+2021/4/12 18:28:42: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 117
+2021/4/12 18:28:42: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 117
+2021/4/12 18:28:43: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 117
+2021/4/12 18:28:44: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 117
+2021/4/12 18:28:44: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 117
+2021/4/12 18:28:44: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 117
+2021/4/12 18:28:44: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 117
+2021/4/12 18:28:44: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 117
+2021/4/12 18:31:40: System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 点名器.Setting_Random.button1_Click(Object sender, EventArgs e) 位置 C:\Users\fc201\source\repos\点名器\点名器\Setting_Random.cs:行号 50
+2021/4/12 18:33:16: System.FormatException: 输入字符串的格式不正确。
+   在 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   在 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   在 System.Convert.ToInt32(String value)
+   在 点名器.Form1.Initial() 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 93
+2021/4/12 18:34:23: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:34:23: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:34:23: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:21: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:22: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:23: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:24: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:25: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:26: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:26: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:27: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:27: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:27: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:28: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:29: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:29: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:29: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:29: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:29: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:30: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:39:30: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:41:17: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:41:46: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:41:46: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:41:47: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:41:47: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:41:47: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
+2021/4/12 18:41:47: System.OutOfMemoryException: 内存不足。
+   在 System.Drawing.Image.FromFile(String filename, Boolean useEmbeddedColorManagement)
+   在 System.Drawing.Image.FromFile(String filename)
+   在 点名器.Form1.Show(Person stu) 位置 C:\Users\fc201\source\repos\点名器\点名器\Form1.cs:行号 131
