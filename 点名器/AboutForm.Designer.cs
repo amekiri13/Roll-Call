@@ -43,7 +43,7 @@ namespace 点名器
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(271, 30);
             this.label1.TabIndex = 3;
-            this.label1.Text = "点名器 Alpha V1.0\r\n©2021 Amekiri All Rights Reserved";
+            this.label1.Text = "点名器 Alpha V1.1\r\n©2021 Amekiri All Rights Reserved";
             // 
             // linkLabel1
             // 
