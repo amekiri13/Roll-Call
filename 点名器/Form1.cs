@@ -72,8 +72,7 @@ namespace 点名器
             }
             catch (FormatException e1)
             {
-                MessageBox.Show(this, "config.ini文件中type的值\"" + t_seed.ToString() + "\"类型不正确，请将config.ini中的type值改为0或1!\r\n" + e1.ToString(), "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                t_seed = "default";
+                MessageBox.Show(this, "config.ini文件中type的值\"" + IniOperate.Read("General", "type", "0", path + "\\config.ini").ToString() + "\"类型不正确，请将config.ini中的type值改为0或1!\r\n" + e1.ToString(), "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 string t_log = "";
                 try
                 {
