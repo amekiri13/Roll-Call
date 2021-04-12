@@ -66,7 +66,31 @@ namespace 点名器
             Interval = Convert.ToInt32(IniOperate.Read("Random", "interval", "100", path + "\\config.ini"));
             //seed = Convert.ToInt32(IniOperate.Read("Random", "seed", "-1", path + "\\config.ini"));
             t_seed = IniOperate.Read("Random", "seed", "default", path + "\\config.ini");
-            type = Convert.ToInt32(IniOperate.Read("General", "type", "0", path + "\\config.ini"));
+            try
+            {
+                type = Convert.ToInt32(IniOperate.Read("General", "type", "0", path + "\\config.ini"));
+            }
+            catch (FormatException e1)
+            {
+                MessageBox.Show(this, "config.ini文件中type的值\"" + t_seed.ToString() + "\"类型不正确，请将config.ini中的type值改为0或1!\r\n" + e1.ToString(), "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                t_seed = "default";
+                string t_log = "";
+                try
+                {
+                    t_log = File.ReadAllText(Environment.CurrentDirectory + "\\debug.log", Encoding.UTF8);
+                }
+                catch (FileNotFoundException e2)
+                {
+                    File.WriteAllText(Environment.CurrentDirectory + "\\debug.log", t_log);
+                }
+                finally
+                {
+                    t_log = t_log + "\n" + DateTime.Now.ToString() + ": " + e1.ToString();
+                    File.WriteAllText(Environment.CurrentDirectory + "\\debug.log", t_log);
+                }
+                Close();
+            }
+
             string t_ve = IniOperate.Read("Voice", "voiceEnable", "false", path + "\\config.ini");
             if (t_ve == "true") voiceEnable = true;
             else if (t_ve == "false") voiceEnable = false;
