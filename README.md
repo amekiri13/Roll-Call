@@ -2,12 +2,7 @@
 ## 更新内容：
 * 名单文件不再是names.txt，而是names.xml
 * 名单格式：
-* <TotalPerson>
-* <Person Name="陈俊伟" ID="01">
-*   <Sex>M</Sex>
-*   <Class>2017届6班</Class>
-*   <ImagePath>null</ImagePath>
-* </TotalPerson>
+* ![](img/9.png)
 ### 解释
 * TotalPerson：总节点
 * Person节点：保存了一些名单信息，其中Name属性为姓名，ID属性为学号
