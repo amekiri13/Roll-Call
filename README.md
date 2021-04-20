@@ -1,3 +1,21 @@
+# 重要通知：名单文件将更新为XML（测试）！！！
+## 更新内容：
+* 名单文件不再是names.txt，而是names.xml
+* 名单格式：
+* <TotalPerson>
+* <Person Name="陈俊伟" ID="01">
+*   <Sex>M</Sex>
+*   <Class>2017届6班</Class>
+*   <ImagePath>null</ImagePath>
+* </TotalPerson>
+### 解释
+* TotalPerson：总节点
+* Person节点：保存了一些名单信息，其中Name属性为姓名，ID属性为学号
+* Sex节点：性别
+* Class节点：班级
+* ImagePath节点：学生图片路径
+* 其中Person Sex Class节点顺序不能更换！！！
+* **同时：文件字符集将使用带BOM的UTF-8！！！**
 # 点名器 Beta V1.1更新：
 1. 新增了名单编辑模块，使名单编辑更加方便
 2. 优化代码结构（字符串判断），增加异常处理，防止程序因异常而中断。
