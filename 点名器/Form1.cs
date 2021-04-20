@@ -35,7 +35,7 @@ namespace 点名器
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Text = "点名器 V1.1.0.2(Beta)";
+            Text = "点名器 V1.1.1.0(Beta)";
             pictureBox1.BackColor = Color.Gray;
             path = Environment.CurrentDirectory;
             checkBox1.Visible = false;
