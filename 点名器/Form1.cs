@@ -16,6 +16,7 @@ namespace 点名器
     public partial class Form1 : Form
     {
         string path;
+        [Obsolete]
         string[] sections_list;
         public ArrayList students = new ArrayList();
         static int i;
@@ -24,6 +25,7 @@ namespace 点名器
         public bool voiceEnable;
         Random rd;
         public static Form1 f1;
+        XMLOperator ope;
 
         public Form1()
         {
@@ -38,8 +40,9 @@ namespace 点名器
             path = Environment.CurrentDirectory;
             checkBox1.Visible = false;
             语音相关设置ToolStripMenuItem.Visible = false;
+            ope = new XMLOperator(path + "\\names.xml");
 
-            if (File.Exists(path + "\\names.txt") == false)
+            /*if (File.Exists(path + "\\names.txt") == false)
             {
                 //File.Create(path + @"\names.txt");
                 IniOperate.Write("Person0", "name", "这里输入姓名", path + "\\names.txt");
@@ -48,20 +51,94 @@ namespace 点名器
                 IniOperate.Write("Person0", "ID", "这里输入学号", path + "\\names.txt");
                 //IniOperate.Write("Person0", "IsDefault", "false", path + "\\names.txt");
                 IniOperate.Write("Person0", "ImagePath", "这里输入学生相关图片路径", path + "\\names.txt");
-                Initial();
+                Initial_1();
+            }*/
+            if (File.Exists(path + "\\names.xml") == false)
+            {
+                Person tp = new Person("姓名", "性别", "学号", "班级", "学生相关图片路径");
+                students.Add(tp);
+                ope.CreateFile(students);
             }
             else
             {
                 //names_init = File.ReadAllText(path + @"\names.txt");
+                //Initial_1();
                 Initial();
             }
-            for (int i = 0; i < sections_list.Length; i++)
+            /*for (int i = 0; i < sections_list.Length; i++)
             {
                 EditnameForm.sections_list.Add(sections_list[i]);
-            }
+            }*/
             //names_list = names_init.Split('\n');
         }
         public void Initial()
+        {
+            Interval = Convert.ToInt32(IniOperate.Read("Random", "interval", "100", path + "\\config.ini"));
+            //seed = Convert.ToInt32(IniOperate.Read("Random", "seed", "-1", path + "\\config.ini"));
+            t_seed = IniOperate.Read("Random", "seed", "default", path + "\\config.ini");
+            try
+            {
+                type = Convert.ToInt32(IniOperate.Read("General", "type", "0", path + "\\config.ini"));
+            }
+            catch (FormatException e1)
+            {
+                MessageBox.Show(this, "config.ini文件中type的值\"" + IniOperate.Read("General", "type", "0", path + "\\config.ini").ToString() + "\"类型不正确，请将config.ini中的type值改为0或1!\r\n" + e1.ToString(), "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string t_log = "";
+                try
+                {
+                    t_log = File.ReadAllText(Environment.CurrentDirectory + "\\debug.log", Encoding.UTF8);
+                }
+                catch (FileNotFoundException e2)
+                {
+                    File.WriteAllText(Environment.CurrentDirectory + "\\debug.log", t_log);
+                }
+                finally
+                {
+                    t_log = t_log + "\n" + DateTime.Now.ToString() + ": " + e1.ToString();
+                    File.WriteAllText(Environment.CurrentDirectory + "\\debug.log", t_log);
+                }
+                Close();
+            }
+
+            string t_ve = IniOperate.Read("Voice", "voiceEnable", "false", path + "\\config.ini");
+            if (t_ve == "true") voiceEnable = true;
+            else if (t_ve == "false") voiceEnable = false;
+            if (type == 0) radioButton1.Checked = true;
+            else if (type == 1) radioButton2.Checked = true;
+            checkBox1.Checked = voiceEnable;
+            students = ope.GetAllInfomationInPerson();
+            if (t_seed == "default") rd = new Random();
+            else
+            {
+                try
+                {
+                    seed = Convert.ToInt32(t_seed);
+                }
+                catch (FormatException e1)
+                {
+                    MessageBox.Show(this, "config.ini文件中seed的值\"" + t_seed.ToString() + "\"类型不正确，请将config.ini中的seed值改为\"default\"或整数!\r\n" + e1.ToString(), "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    t_seed = "default";
+                    string t_log = "";
+                    try
+                    {
+                        t_log = File.ReadAllText(Environment.CurrentDirectory + "\\debug.log", Encoding.UTF8);
+                    }
+                    catch (FileNotFoundException e2)
+                    {
+                        File.WriteAllText(Environment.CurrentDirectory + "\\debug.log", t_log);
+                    }
+                    finally
+                    {
+                        t_log = t_log + "\n" + DateTime.Now.ToString() + ": " + e1.ToString();
+                        File.WriteAllText(Environment.CurrentDirectory + "\\debug.log", t_log);
+                    }
+                    Close();
+                }
+                rd = new Random(seed);
+            }
+        }
+        [Obsolete]
+        public void Initial_1()
         {
             Interval = Convert.ToInt32(IniOperate.Read("Random", "interval", "100", path + "\\config.ini"));
             //seed = Convert.ToInt32(IniOperate.Read("Random", "seed", "-1", path + "\\config.ini"));
@@ -291,9 +368,9 @@ namespace 点名器
                 textBox5.ScrollToCaret();
             }
         }
-        public string[] GetAllSections()
+        public void WriteXmlFile(ArrayList per)
         {
-            return sections_list;
+            ope.CreateFile(per);
         }
         
     }

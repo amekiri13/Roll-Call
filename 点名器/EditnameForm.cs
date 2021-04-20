@@ -130,8 +130,8 @@ namespace 点名器
         private void button4_Click(object sender, EventArgs e)
         {
             Person p;
-            File.Delete(Environment.CurrentDirectory + "\\names.txt");
-            for(int i = 0; i < stuList.Count; i++)
+            File.Delete(Environment.CurrentDirectory + "\\names.xml");
+           /* for(int i = 0; i < stuList.Count; i++)
             {
                 p = (Person)stuList[i];
                 if (!p.WriteFile(Environment.CurrentDirectory + "\\names.txt")) 
@@ -139,7 +139,7 @@ namespace 点名器
                     MessageBox.Show(this, "写入文件失败！", "错误！", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-            }
+            }*/
             Form1.f1.students.Clear();
             for(int i = 0; i < stuList.Count; i++)
             {
@@ -147,6 +147,7 @@ namespace 点名器
                 Person t_p1 = new Person(t_p.GetName(), t_p.GetSex(), t_p.GetPersonID(), t_p.GetClass(), t_p.GetPersonnalImagePath(), t_p.GetLocalSection());
                 Form1.f1.students.Add(t_p1);
             }
+            Form1.f1.WriteXmlFile(stuList);
             
             MessageBox.Show(this, "修改成功！", "提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
@@ -163,15 +164,15 @@ namespace 点名器
         {
             Random rd = new Random();
 
-            string t_secname = (string)sections_list[0];
+            /*string t_secname = (string)sections_list[0];
             for (int i = 0; isSectionExist(sections_list, t_secname); i++) 
             {
                 t_secname = string.Format("Person{0}", i);
-            }
+            }*/
             
-            Person p = new Person("姓名", "M", "ID", "班级", "图像路径", t_secname);
+            Person p = new Person("姓名", "M", "ID", "班级", "图像路径");
             stuList.Add(p);
-            sections_list.Add(t_secname);
+            //sections_list.Add(t_secname);
             index = stuList.Count - 1;
             show();
         }
