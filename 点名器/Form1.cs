@@ -58,6 +58,7 @@ namespace 点名器
                 Person tp = new Person("姓名", "性别", "学号", "班级", "学生相关图片路径");
                 students.Add(tp);
                 ope.CreateFile(students);
+                Initial();
             }
             else
             {
