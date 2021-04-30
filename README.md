@@ -9,7 +9,7 @@
 * Sex节点：性别
 * Class节点：班级
 * ImagePath节点：学生图片路径
-* 其中Person Sex Class节点顺序不能更换！！！
+* 其中Sex Class ImagePath节点顺序不能更换！！！
 * **同时：文件字符集将使用带BOM的UTF-8！！！**
 # 点名器 Beta V1.1更新：
 1. 新增了名单编辑模块，使名单编辑更加方便
