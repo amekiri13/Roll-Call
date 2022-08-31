@@ -1,3 +1,7 @@
+# 通知：WinForm版本停止维护，转为Electron项目
+
+由于WinForm不跨平台，且需要安装.NET Framework（已经停止更新），项目转为Electron
+
 # 点名器 V1.1.1.0(Beta)重要通知：名单文件将更新为XML（测试）！！！
 ## 更新内容：
 * 名单文件不再是names.txt，而是names.xml
